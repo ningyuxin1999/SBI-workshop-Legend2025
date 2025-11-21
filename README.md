@@ -11,12 +11,10 @@ sbi_workshop_Legend2025/
 ├── requirements.yaml      # Conda environment specification
 └── notebooks/             # Jupyter notebooks for the workshop
       ├── 1_introduction_to_sbi.ipynb
-      ├── 2_toy_example_generic.ipynb
-      ├── 3_toy_example_popgen.ipynb
-      ├── 4_data_simulation_msprime.ipynb
-      ├── 5_site_frequency_spectrum.ipynb
-      ├── 6_complex_scenario.ipynb
-      └── 7_snakemake_placeholder.ipynb
+      ├── 2_data_simulation_msprime.ipynb
+      ├── 3_SBI_in_popgen.ipynb
+      ├── 4_complex_scenario.ipynb
+      └── 5_snakemake_workflow.ipynb
 
 ```
 
