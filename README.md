@@ -23,6 +23,10 @@ sbi_workshop_Legend2025/
 
 We recommend using **Visual Studio Code** or JupyterLab for exploring the notebooks.  To set up a working environment:
 
+0. **Clone this github repository**:
+   ```bash
+   git clone git@github.com:ningyuxin1999/SBI-WORKSHOP-LEGEND2025.git
+   ```
 1. **Install Conda**: If you do not already have a conda distribution (e.g., Miniconda), install it from <https://docs.conda.io/en/latest/miniconda.html>.
 
 2. **Clone the repository**: clone the workshop repo to your local machine
