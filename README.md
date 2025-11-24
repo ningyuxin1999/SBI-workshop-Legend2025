@@ -41,7 +41,7 @@ We recommend using **Visual Studio Code** or JupyterLab for exploring the notebo
    ```
    If you are running out of local disk space use
    ```bash
-   $TEMPDIR=/path/to/folder/with/spacer pip install sbi
+   TMPDIR=/path/to/folder/with/spacer pip install sbi
    ```
    instead.
 
