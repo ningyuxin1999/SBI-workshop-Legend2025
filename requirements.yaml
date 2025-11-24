@@ -1,4 +1,4 @@
-name: sbi-workshop
+name: si-workshop
 channels:
   - pytorch
   - conda-forge
@@ -14,4 +14,4 @@ dependencies:
       - tskit
       - jupyter
       - ipykernel
-      - numpy==1.24.1
+      - numpy==2.3.5
