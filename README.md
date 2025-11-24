@@ -22,6 +22,10 @@ sbi_workshop_Legend2025/
 
 We recommend using **Visual Studio Code** or JupyterLab for exploring the notebooks.  To set up a working environment:
 
+0. **Clone this github repository**:
+   ```bash
+   git clone git@github.com:ningyuxin1999/SBI-WORKSHOP-LEGEND2025.git
+   ```
 1. **Install Conda**: If you do not already have a conda distribution (e.g., Miniconda), install it from <https://docs.conda.io/en/latest/miniconda.html>.
 2. **Create an environment**: Use the provided `requirements.yaml` to create a reproducible environment:
 
@@ -30,7 +34,18 @@ We recommend using **Visual Studio Code** or JupyterLab for exploring the notebo
    conda activate sbi-workshop
    ```
 
-3. **Launch notebooks**: Open the notebooks folder in VS Code or run
+3. **install sbi**: Install the sbi package using pip within your conda environment:
+
+   ```bash
+   pip install sbi
+   ```
+   If you are running out of local disk space use
+   ```bash
+   $TEMPDIR=/path/to/folder/with/spacer pip install sbi
+   ```
+   instead.
+
+4. **Launch notebooks**: Open the notebooks folder in VS Code or run
 
    ```bash
    jupyter notebook notebooks/
