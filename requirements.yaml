@@ -1,4 +1,4 @@
-name: si-workshop
+name: sbi-workshop
 channels:
   - pytorch
   - conda-forge
@@ -6,12 +6,11 @@ channels:
   - defaults
 dependencies:
   - python=3.12
-  - snakemake
   - pip
   - pip:
+      - sbi
       - msprime
       - matplotlib
       - tskit
       - jupyter
       - ipykernel
-      - numpy==2.3.5

@@ -19,32 +19,59 @@ sbi_workshop_Legend2025/
 ```
 
 ## Getting started
+### **The installation requires large memory usage, so we highly recommend you to set up the environment in advance!**
 
 We recommend using **Visual Studio Code** or JupyterLab for exploring the notebooks.  To set up a working environment:
 
 1. **Install Conda**: If you do not already have a conda distribution (e.g., Miniconda), install it from <https://docs.conda.io/en/latest/miniconda.html>.
-2. **Create an environment**: Use the provided `requirements.yaml` to create a reproducible environment:
+
+2. **Clone the repository**: clone the workshop repo to your local machine
+   ```bash
+   git clone https://github.com/ningyuxin1999/SBI-WORKSHOP-LEGEND2025.git
+
+   cd SBI-WORKSHOP-LEGEND2025
+   ```
+3. **Create an environment**: Use the provided `requirements.yaml` to create a reproducible environment:
 
    ```bash
    conda env create -f requirements.yaml
    conda activate sbi-workshop
    ```
 
-3. **Launch notebooks**: Open the notebooks folder in VS Code or run
+4. **Launch notebooks**: Open the notebooks folder in VS Code or run
 
    ```bash
    jupyter notebook notebooks/
    ```
 
-The `requirements.yaml` file lists the core dependencies (`msprime`, `tskit`, `torch`, `sbi`, `matplotlib`, etc.).  Feel free to install additional packages manually.
+The `requirements.yaml` file lists the core dependencies (`msprime`, `tskit`, `torch`, `sbi`, `matplotlib`, etc.).  Feel free to install additional packages manually. 
 
 ## Notebook overview
 
-1. **Introduction to SBI** – outlines the motivation behind SBI, explains the main algorithms implemented in the [`sbi` toolkit](https://sbi-dev.github.io/sbi), and includes a warm‑up example inferring the mean of a normal distribution.
-2. **Data simulation (msprime)** – demonstrates how to simulate ancestry and mutations with `msprime` and compute basic summary statistics like the site frequency spectrum (SFS).  It highlights that `msprime` version 1.0 efficiently implements ancestry and mutation simulation using the succinct tree sequence data structure.
-3. **SBI in population genetics** – uses `msprime` to simulate DNA sequences under a constant population size and infers the effective population size from the number of segregating sites.
-4. **Complex scenario** – simulates a two‑epoch population size change and examines how demographic events affect the SFS.
-5. **Snakemake workflow** – describes how the [popgensbi_snakemake](https://github.com/kr-colab/popgensbi_snakemake) pipeline can be integrated into the workshop. The workflow runs training and prediction tasks via Snakemake and uses configuration files to specify simulation and inference settings.
+### Notebook 1: Introduction to SBI
+Understand the syntax of the `sbi` package and the concept of Neural Posterior Estimation (NPE):
+* Inference on a simple Linear Gaussian model.
+* Define a `Prior`, a `Simulator`, and run the `NPE` trainer to learn parameter-data relationships.
+
+### Notebook 2: Data Simulation with msprime
+Generate genetic data and summary statistics.
+* Simulating constant populations, extracting genotype matrices from tree sequences, and the Site Frequency Spectrum (SFS).
+
+### Notebook 3: SBI in Population Genetics
+SBI in inference of popgen parameters
+* Inferring effective population size ($N_e$) and recombination rates from SFS data.
+* The whole workflow: generating training data ($\theta, x$), training the density estimator, and performing posterior predictive checks.
+
+### Notebook 4: Complex Demographic Scenarios
+Handling real-world complexity and custom classes.
+* Defining custom Object-Oriented simulators for variable population sizes over time.
+
+### Notebook 5: Snakemake Workflow
+Reproducibility and scaling.
+* Integrating the [popgensbi_snakemake](https://github.com/kr-colab/popgensbi_snakemake) pipeline.
+* Automating training and prediction tasks via Snakemake configurations.
+
+---
 
 ## Contributing
 
